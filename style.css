@@ -6,9 +6,11 @@
 body {
     background-color: hsl(235, 16%, 14%);
     font-family: redhat;
-    background-image: url(./images/bg-stars.svg);
+    background-image: url(./images/bg-stars.svg), url(./images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
     width: 100%;
-    min-height: 100vh;
 }
 
 #background {
@@ -81,14 +83,15 @@ span p {
 
 #socialMediaCont {
     position: relative;
-    /* bottom: 100px;
-    right: 40%; */
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-content: end;
-    margin-top: 200px;
+    /* margin-top: 200px; */
     z-index: 2;
-    /* position: relative; */
     gap: 30px;
 }
 
@@ -179,8 +182,10 @@ hr {
     }
 
     #socialMediaCont {
-        margin-top: 300px;
-        position: relative;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #background {
