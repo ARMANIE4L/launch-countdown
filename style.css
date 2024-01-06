@@ -8,6 +8,7 @@ body {
     font-family: redhat;
     background-image: url(./images/bg-stars.svg);
     width: 100%;
+    min-height: 100vh;
 }
 
 #background {
