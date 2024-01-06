@@ -1,0 +1,184 @@
+@font-face {
+    font-family: redhat;
+    src: url(./fonts/RedHatText-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: hsl(235, 16%, 14%);
+    font-family: redhat;
+    background-image: url(./images/bg-stars.svg);
+    width: 100%;
+}
+
+#background {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    height: 200px;
+    width: 100%;
+}
+
+#stars {
+    z-index: 0;
+    position: fixed;
+}
+
+#launchingSoon {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin-top: 60px;
+    transition: ease-in-out 1s;
+    
+}
+
+#icon {
+    transition: 0.6s;
+}
+
+#icon:hover {
+    background-color: hsl(345, 95%, 68%);
+    color: hsl(345, 95%, 68%);
+    padding: 1px;
+}
+
+#displayCont {
+    margin-top: 90px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-shrink: 10;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#dayNum, #hourNum, #minuteNum, #secondNum {
+    text-align: center;
+    float: left;
+    color: hsl(345, 95%, 68%);
+    margin-top: 15px;
+    margin-left: 7px;
+    font-size: 4em;
+    font-weight: 800;
+    position: relative;
+    /* top: 20.9%; */
+    /* margin-left: 22px; */
+    /* position: absolute; */
+}
+
+span p {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 0.5em;
+    color: hsl(237, 18%, 59%);
+    letter-spacing: 4px;
+    font-weight: 800;
+    position: relative;
+}
+
+#socialMediaCont {
+    position: relative;
+    /* bottom: 100px;
+    right: 40%; */
+    display: flex;
+    justify-content: center;
+    align-content: end;
+    margin-top: 200px;
+    z-index: 2;
+    /* position: relative; */
+    gap: 30px;
+}
+
+#upPage, #downPage {
+    min-width: 120px;
+    height: 60px;
+    background-color: hsl(236, 21%, 26%);
+    margin-bottom: 1px;
+    z-index: 0;
+    position: absolute;
+    
+}
+
+#pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 2px;
+    flex-shrink: 4;
+}
+
+#upPage {
+    border-radius: 4px;
+    border-bottom-right-radius: 1px;
+    border-bottom-left-radius:0px ;
+    z-index: 0;
+    
+    transform: skew(-2deg);
+}
+
+#downPage {
+    transform: skew(2deg);
+    border-radius: 4px;
+    border-top-left-radius:1px ;
+    border-top-right-radius:0px ;
+    margin-top:61px;
+    z-index: 0;
+    box-shadow: 1px 5px 2px #000;
+    /* border-bottom: 2px solid hsl(236, 21%, 26%) ; */
+}
+
+hr {
+    position: absolute;
+    z-index: 5;
+}
+
+/* extra small device */
+@media (max-width:600px) {
+    #launchingSoon {
+        letter-spacing: 3px;
+        font-size: 0.8em;
+        margin-top: 60px;
+    }
+
+    #displayCont {
+        gap: 35px;
+        margin: 80px 80px;
+    }
+
+    #dayNum, #hourNum, #minuteNum, #secondNum {
+        font-size: 2.5em;
+        margin-top: 3px;
+        margin-left: ;
+    }
+
+    span p {
+        margin-top: 50px;
+        font-size: 0.5em;
+        letter-spacing: 3px;
+    }
+
+
+    #upPage, #downPage {
+        min-width: 65px;
+        height: 30px;
+        margin-bottom: 0px;
+    }
+
+    #pages {
+        column-gap: 1px;
+        flex-direction: column;
+        display: flex;
+        flex-shrink: 4;
+    }
+
+    #downPage {
+        margin-top: 31px;
+    }
+
+    #socialMediaCont {
+        margin-top: 300px;
+        position: relative;
+    }
+}
